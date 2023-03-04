@@ -2,6 +2,8 @@
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
+When working with contracts with another names (probably) you need to edit deploy.js and change "Lock, lock"
+
 Try running some of the following tasks:
 
 ```shell

@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from "react";
+import contractAddress from "./contracts/contract-address.json"; // address generated from the deploy script
+import CMArtifact from "./contracts/Lock.json"; // artifacts generated from the deploy script
+import { ethers } from "ethers";
 
 function App() {
   return (

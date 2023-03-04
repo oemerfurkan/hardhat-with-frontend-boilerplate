@@ -1,3 +1,6 @@
 {
-  "name": "hardhat-project"
+  "name": "hardhat-project",
+  "dependencies": {
+    "ethers": "^6.0.8"
+  }
 }

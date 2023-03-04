@@ -1,29 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from "react";
 import contractAddress from "./contracts/contract-address.json"; // address generated from the deploy script
-import CMArtifact from "./contracts/Lock.json"; // artifacts generated from the deploy script
+import LockArtifact from "./contracts/Lock.json"; // Change to contract's name
 import { ethers } from "ethers";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [contract, SetContract] = useState(undefined);
+  const [selectedAddress, setSelectedAddress] = useState(undefined);
+  const [balance, setBalance] = useState(undefined);
+
 }
 
 export default App;

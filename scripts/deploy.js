@@ -32,10 +32,10 @@ function saveFrontendFiles(lock) {
     JSON.stringify({ Lock: lock.address }, null, 2)
   );
   // `artifacts` is a helper property provided by Hardhat to read artifacts
-  const CMArtifact = artifacts.readArtifactSync("Lock");
+  const LockArtifact = artifacts.readArtifactSync("Lock");
   fs.writeFileSync(
     contractsDir + "/Lock.json",
-    JSON.stringify(CMArtifact, null, 2)
+    JSON.stringify(LockArtifact, null, 2)
   );
 }
 main()

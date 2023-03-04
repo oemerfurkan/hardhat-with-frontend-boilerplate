@@ -6,9 +6,30 @@ import { ethers } from "ethers";
 
 function App() {
 
-  const [contract, SetContract] = useState(undefined);
+  const [contract, setContract] = useState(undefined);
   const [selectedAddress, setSelectedAddress] = useState(undefined);
-  const [balance, setBalance] = useState(undefined);
+
+  const connectWallet = async () => {
+
+      const [selectedAddress] = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      setSelectedAddress(selectedAddress);
+  
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+  
+      const lock = new ethers.Contract(
+        contractAddress.Lock,
+        LockArtifact.abi,
+        provider.getSigner(0)
+      );
+      setContract(lock);
+
+  };
+
+  useEffect(() => {
+    connectWallet();
+  }, []);
 
 }
 

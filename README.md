@@ -2,6 +2,14 @@
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract. And also with a frontend folder where you can insert your frontend. It also sets up all contract informations in the "frontend/src/contracts/Lock.json"
 
+Configuration:
+
+```shell
+npm install
+cd frontend
+npm install
+```
+
 When working with contracts with another names (probably) you need to edit deploy.js and change "Lock, lock"
 
 Try running some of the following tasks:
